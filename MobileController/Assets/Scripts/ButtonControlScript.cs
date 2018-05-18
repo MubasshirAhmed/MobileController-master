@@ -26,10 +26,7 @@ public class ButtonControlScript : MonoBehaviour
     public void OnButtonDown(bool site)
     {
         ballMove = true;
-        if (site)
-            movementSpeed = -Mathf.Abs(movementSpeed);
-        else
-            movementSpeed = Mathf.Abs(movementSpeed);
+        movementSpeed = site ? -Mathf.Abs(movementSpeed) : Mathf.Abs(movementSpeed);
     }
 
     public void OnButtonUp()
